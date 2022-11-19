@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diary</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="contain">
+            <div class="center-contain " >
+                    <table class="table" >
+                        <tr>
+                            <td>
+                                <a href="sign-up.html"><button><span id="span1"></span> sign-Up
+                                    <img src="logos/next-logo.png">
+                                </button></a>
+                            </td>
+                        </tr>
+                        <form action="login.php" method="post" id="fm">
+                        <tr>
+                            <td>
+                                <input type="text" name="username" placeholder="  Username" class="userfield" style="background-color:rgb(196, 195, 195);" id="lusername">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="password" name="pwd" placeholder="  Password" class="userfield" style="background-color:rgb(196, 195, 195);" id="lpwd">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit" style="border: solid #0ec736 2px;"><span id="span2"></span>Login</button><br><span id="error"></span>
+                            </td>
+                        </tr>
+                        </form>
+                    </table>
+            </div>
+        </div>
+        <script>
+            let form=document.getElementById("fm");
+            form.addEventListener('submit',event=>{
+                event.preventDefault();
+                validated();
+                //error.innerText="*Username cannot be empty";
+                
+            });
+            function validated(){
+                let uname=document.getElementById("lusername").value.trim();
+                let pwd=document.getElementById("lpwd").value.trim();
+                let error=document.getElementById('error');
+                if (uname==""){
+                    error.innerText="*Username cannot be empty";
+                    return;
+                }
+                if (pwd==""){
+                    error.innerText="*Password Cannot be Empty";
+                    return;
+                }
+                if (pwd.length<8){
+                    error.innerText="*Password must be atleast 8 characters";
+                    return;
+                }
+                if (!pwd.match(/[a-z]/)){
+                    error.innerText="*Must include atleast 1 lower case letter";
+                    return;
+                }
+                if (!pwd.match(/[A-Z]+/)){
+                    error.innerText="*Must include atleast 1 Upper case letter";
+                    return;
+                }
+                if (!pwd.match(/[$#@_\.]+/)){
+                    error.innerText="*Must include atleast 1 Special character";
+                    return;
+                }
+                if (!pwd.match(/[0-9]/)){
+                    error.innerText="*Must include atleast 1 Number";
+                    return;
+                }
+                form.submit();
+            }
+        </script>
+    </body>
+</html>
