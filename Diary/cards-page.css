@@ -1,0 +1,106 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body
+{
+
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/BG04.png");
+    background-size:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*All cards*/
+.card
+{
+    margin:30px;
+    width:200px;
+    height: 250px;
+    background-image: url("logos/card.png");
+    background-size: 220px 270px;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(196, 193, 190);
+}
+.text
+{
+    background-color: #575a5a;
+	color:lightgrey;
+    border-radius: 5px;
+    height: 130px;
+    width: 185px;
+	padding:6px;
+    margin-left: 3px;
+    overflow: hidden;
+}
+.date
+{
+    margin-top: 30px;
+    font-weight: bold;
+
+}
+
+/*submit Button*/
+.submit-button
+{
+    position: relative;
+    margin-top: 15px;
+}
+.submit-button img
+{
+    position: relative;
+    top:5px
+}
+button
+{
+    width: 100px;
+    padding: 5px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #b2b9b9;
+    background: transparent;
+    color: #b2b9b9;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: #ccc9c9;
+}
+span
+{
+    background: #50bebe;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span
+{
+    width: 100%;
+}
+button:hover
+{
+    color: aqua;
+	border: solid 2px aqua;
+}
+.top-cards
+{
+    display: flex;
+	margin-left: 100px;
+}
+.all-cards{
+	width:100%;
+	height:700px;
+	overflow:scroll;
+	
+}

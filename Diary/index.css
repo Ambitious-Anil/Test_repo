@@ -1,0 +1,105 @@
+
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("img/BG01.png");
+    background-size:100vw;
+    
+}
+
+.contain
+{
+    position: relative;
+    padding-top: 100px;
+}
+
+.center-contain
+{
+    width: 400px;
+    height: 450px;
+    border-radius: 10px;
+    border: 3px solid #ccc9c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userfield
+{
+    border-width: 0px;
+    border-radius: 6px;
+    margin: 10px 10px;
+    width: 250px;
+    height: 30px;
+    color: #181515;
+    font-weight: 410;
+}
+
+td
+{
+    text-align: center;
+}
+
+button
+{
+    width: 130px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 2px solid #1fb1c1;
+    background: transparent;
+    color: rgb(225, 219, 219);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #ccc9c9;
+}
+
+#span1
+{
+    background: #1fb1c1;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+#span2
+{
+    background: #0ec736;
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover #span1
+{
+    width: 100%;
+}
+button:hover #span2
+{
+    width: 100%;
+}
+a button:hover
+{
+    color: black;
+}
+#error{
+    color:red;
+}

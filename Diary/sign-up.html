@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diary</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="contain">
+            <div class="center-contain " >
+                <table class="table" >
+                    <tr>    
+                        <td>
+                            <a href="index.html"><button><span id="span1"></span>
+                                <img src="logos/previous-logo.png"> Login
+                            </button></a>
+                        </td>
+                    </tr>
+                    <form action="signup.php" method="post" id="fm">
+                    <tr>
+                        <td>
+                            <input type="text" name="fullname" placeholder="  Full Name" class="userfield" style="background-color:rgb(196, 195, 195);" id="fullname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="username" placeholder="  Username" class="userfield" style="background-color:rgba(196, 195, 195);" id="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" name="pwd" placeholder="  Password" class="userfield" style="background-color:rgb(196, 195, 195);" id="pwd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" style="border: solid #0ec736 2px;"><span id="span2"></span>Create</button><br><span id="error"></span>
+                        </td>
+                    </tr>
+                    </form>
+                </table>
+            </div>
+        </div>
+        <script>
+            let form=document.getElementById('fm');
+            form.addEventListener('submit',event=>{
+                event.preventDefault();
+                validate();
+            });
+            function validate(){
+                let name=document.getElementById("fullname").value.trim();
+                let uname=document.getElementById("username").value.trim();
+                let pwd=document.getElementById("pwd").value.trim();
+                let error=document.getElementById('error');
+                if (name==""){
+                    error.innerText=" * Name Cannot be Empty";
+                    return;
+                }
+                if (!isNaN(name)){
+                    error.innerText=" * Name Should not include Numbers";
+                    return;
+                }
+                if (name.length<3){
+                    error.innerText="*Name Should Contain atleast 3 letters";
+                    return;
+                }
+                if (uname==""){
+                    error.innerText="*Username cannot be empty";
+                    return;
+                }
+                if (pwd==""){
+                    error.innerText="*Password Cannot be Empty";
+                    return;
+                }
+                if (pwd.length<8){
+                    error.innerText="*Password must be atleast 8 characters";
+                    return;
+                }
+                if (!pwd.match(/[a-z]/)){
+                    error.innerText="*Must include atleast 1 lower case letter";
+                    return;
+                }
+                if (!pwd.match(/[A-Z]+/)){
+                    error.innerText="*Must include atleast 1 Upper case letter";
+                    return;
+                }
+                if (!pwd.match(/[$#@_\.]+/)){
+                    error.innerText="*Must include atleast 1 Special character";
+                    return;
+                }
+                if (!pwd.match(/[0-9]/)){
+                    error.innerText="*Must include atleast 1 Number";
+                    return;
+                }
+                form.submit();
+            }
+        </script>
+    </body>
+</html>

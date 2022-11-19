@@ -1,0 +1,113 @@
+
+body
+{
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/BG02.png");
+    background-size:100vw;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.bdy{
+	display:flex;
+}
+/*All center Things*/
+.center-contain
+{
+    margin-left: 330px;
+    margin-top: 20px;
+    width: 560px;
+    height: 630px;
+    color: #2c83c2;
+}
+
+/*date Text*/
+#date-text
+{
+    position: relative;
+    margin-left: 400px;
+    color: #333232;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/*Text Area */
+.main-text textarea
+{
+    margin-left: 30px;
+    padding: 5px;
+    width: 500px;
+    height: 530px;
+    border-radius: 10px;
+    border: 3px solid #ccc9c9;
+    background: transparent;
+    color: #333232;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/*submit Button*/
+
+button
+{
+    width: 100px;
+    padding: 5px 0;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 2px solid #3d3e3e;
+    background: transparent;
+    color: #3d3e3e;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: #ccc9c9;
+}
+#text
+{
+    background: transparent;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span
+{
+    width: 100%;
+}
+a button:hover
+{
+    color: rgb(182, 175, 175);
+}
+
+
+/*side images button*/
+.imgslide-contain
+{
+    position: relative;
+    top: 100px;
+    right: -100px;
+    width: 300px;
+    height: 500px;
+    color: rgb(16, 183, 183);
+}
+.submit-button{
+	margin-top:-25px;
+	margin-left:750px;	
+}
+.submit-button
+{
+
+}
+.submit-button img
+{
+    position: relative;
+    top:5px
+}
